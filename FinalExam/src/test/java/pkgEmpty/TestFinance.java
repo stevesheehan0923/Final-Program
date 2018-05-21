@@ -37,7 +37,18 @@ public class TestFinance {
 
 	@Test
 	public void TestPMT() {
+		
+		int iYearsToWork = 40;
+		double dAnnualReturnWorking = 0.07;
+		int iYearsRetired = 20;
+		double dAnnualReturnRetired = 0.02;
+		double dRequiredIncome = 10000;
+		double dMonthlySSI = 2642;
+		double dPresentValue = 1454485.55;
+		
+		double PMT = Retirement.PMT(dAnnualReturnRetired / 12, iYearsRetired * 12, dPresentValue, 0, false);
+		
+		assertEquals(7358,Math.abs(PMT),.01);
 
-		//TODO: Test PMT.  Make sure PMT works as expected.
 	}
 }

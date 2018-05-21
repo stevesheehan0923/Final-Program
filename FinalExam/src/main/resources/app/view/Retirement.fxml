@@ -10,30 +10,34 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgApp.controller.RetirementController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgApp.controller.RetirementController">
    <bottom>
-      <HBox prefHeight="35.0" prefWidth="410.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="35.0" prefWidth="410.0" style="-fx-background-color: #2d00ff#2d00ff #2d00ff#2d00ff;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="ErrorBox" alignment="CENTER" disable="true" editable="false" prefHeight="31.0" prefWidth="603.0" visible="false" />
          </children>
          </HBox>
    </bottom>
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2d00ff#2d00ff #2d00ff#2d00ff;" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <VBox prefHeight="480.0" prefWidth="87.0" style="-fx-background-color: #2d00ff#2d00ff #2d00ff#2d00ff;" BorderPane.alignment="CENTER" />
    </right>
    <top>
-      <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #2d00ff#2d00ff #2d00ff#2d00ff;" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Retirement Calculator" />
+            <Label text="Retirement Calculator" textFill="#ff9400" underline="true">
+               <font>
+                  <Font name="Chalkboard" size="33.0" />
+               </font></Label>
          </children>
       </HBox>
    </top>
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane style="-fx-background-color: #2d00ff#2d00ff;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -52,22 +56,52 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Save Each Month" />
-            <Label text="Years to Work" GridPane.rowIndex="1" />
-            <Label text="Working Annual Return (%)" GridPane.rowIndex="2" />
-            <Label text="Amount You Need to Save" GridPane.rowIndex="4" />
-            <Label text="Years Retired" GridPane.rowIndex="6" />
-            <Label text="Retired Annual Return (%)" GridPane.rowIndex="7" />
-            <Label text="Required Income" GridPane.rowIndex="8" />
-            <Label text="Monthly SSI" GridPane.rowIndex="9" />
+            <Label text="Save Each Month" textFill="#ff9400">
+               <font>
+                  <Font name="Chalkboard" size="25.0" />
+               </font></Label>
+            <Label text="Years to Work" textFill="#ff9400" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Chalkboard" size="29.0" />
+               </font></Label>
+            <Label text="Working Annual Return (%)" textFill="#ff9400" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Chalkboard" size="16.0" />
+               </font></Label>
+            <Label text="Amount You Need to Save" textFill="#ff9400" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Chalkboard" size="16.0" />
+               </font></Label>
+            <Label text="Years Retired" textFill="#ff9400" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Chalkboard" size="31.0" />
+               </font></Label>
+            <Label text="Retired Annual Return (%)" textFill="#ff9400" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Chalkboard" size="16.0" />
+               </font></Label>
+            <Label text="Required Income" textFill="#ff9400" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Chalkboard" size="26.0" />
+               </font></Label>
+            <Label text="Monthly SSI" textFill="#ff9400" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Chalkboard" size="35.0" />
+               </font></Label>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                <children>
                   <Button mnemonicParsing="false" onAction="#btnClear" text="Clear">
                      <HBox.margin>
                         <Insets left="5.0" right="5.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Chalkboard" size="14.0" />
+                     </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#btnCalculate" text="Calculate" />
+                  <Button mnemonicParsing="false" onAction="#btnCalculate" text="Calculate">
+                     <font>
+                        <Font name="Chalkboard" size="14.0" />
+                     </font></Button>
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
